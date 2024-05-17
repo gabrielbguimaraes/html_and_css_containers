@@ -1,0 +1,42 @@
+.caixa_azul{
+    position: relative;
+    background-color:aqua;
+    inline-size: 70%;
+    width: 50%;
+    padding: 15%;
+    left: 150px;
+    border-style: solid;
+    height: 100px;
+    
+}
+.foto img{
+    --s: 250px;   /* the size of the image */
+    --b: 8px;     /* the border thickness*/
+    --g: 14px;    /* the gap */
+    --c: #4ECDC4; /* the color */
+    width: 250;
+    cursor: pointer;
+    transition: .3s;
+    left: 300px;
+    
+}
+.foto img:hover {
+    outline: var(--b) solid var(--c);
+    outline-offset: var(--g);
+  }
+.foto{
+    vertical-align: top;
+}
+.fundo-branco {
+    position: absolute; 
+    top: 50px; 
+    left: 15%;
+    transform: translateX(-50%); 
+    padding: 1%;
+    background-color: white;
+    inline-size: 20%;
+    justify-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
