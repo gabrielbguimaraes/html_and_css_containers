@@ -1,42 +1,72 @@
-.caixa_azul{
-    position: relative;
-    background-color:aqua;
-    inline-size: 70%;
-    width: 50%;
-    padding: 15%;
-    left: 150px;
-    border-style: solid;
-    height: 100px;
-    
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-.foto img{
-    --s: 250px;   /* the size of the image */
-    --b: 8px;     /* the border thickness*/
-    --g: 14px;    /* the gap */
-    --c: #4ECDC4; /* the color */
-    width: 250;
-    cursor: pointer;
-    transition: .3s;
-    left: 300px;
-    
+
+.caixa_azul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: aqua;
+    padding: 20px;
+    border: 2px solid black;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    box-sizing: border-box;
 }
-.foto img:hover {
-    outline: var(--b) solid var(--c);
-    outline-offset: var(--g);
-  }
-.foto{
-    vertical-align: top;
-}
+
 .fundo-branco {
-    position: absolute; 
-    top: 50px; 
-    left: 15%;
-    transform: translateX(-50%); 
-    padding: 1%;
     background-color: white;
-    inline-size: 20%;
-    justify-items: center;
+    padding: 20px;
+    border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+    flex: 1 1 200px;
+}
+
+.foto {
+    order: 1;
+    flex: 1 1 250px;
+}
+
+.foto img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.foto img:hover {
+    outline: 8px solid #4ECDC4;
+    outline-offset: 14px;
+}
+
+.descricao {
+    order: 2;
+    text-align: center;
+    flex: 2 1 600px;
+}
+
+.social-links {
+    order: 3;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.link {
+    text-align: center;
+    flex: 1 1 200px;
+}
+
+.link a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold
 }
