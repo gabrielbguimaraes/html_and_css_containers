@@ -68,5 +68,39 @@ body {
 .link a {
     text-decoration: none;
     color: black;
-    font-weight: bold
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+    .caixa_azul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .foto,
+    .descricao {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .caixa_azul {
+        padding: 10px;
+        background-color: black;
+    }
+    .fundo-branco {
+        padding: 10px;
+    }
+    .fundo-branco.descricao{
+        inline-size: 100%;
+    }
+    .foto img:hover {
+        outline-offset: 8px;
+    }
+    .social-links {
+        flex-direction: column;
+    }
+    .link {
+        flex: 1 1 auto;
+    }
 }
